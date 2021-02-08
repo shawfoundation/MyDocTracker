@@ -1,177 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <% include /metaTags %>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.css" />
-  </head>
 
-  <body>
-    <% include /header %>
+<head>
+	<% include /metaTags %>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.css" />
+</head>
 
-    <div class="wrapper">
+<body>
+	<% include /header %>
 
-			<%- include('/sidebar', {activeMenu: 'home'}) %>
+		<div class="wrapper">
 
-			<main class="main" id="main">
-				<%- include('/breadcrumb', {menuTitle: 'Dashboard', menuIcon: 'fa-tachometer'}) %>
+			<%- include('/sidebar', {activeMenu: 'home' }) %>
 
-				<div class="columns is-multiline">
-					<div class="column">
-						<div class="box notification is-primary">
-							<div class="heading">Top Seller Total</div>
-							<div class="title">56,950</div>
-							<div class="level">
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Sales $</div>
-										<div class="title is-5">250K</div>
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: 'Dashboard' , menuIcon: 'fas fa-tachometer-alt' }) %>
+
+						<div class="columns is-multiline">
+							<div class="title is-4 ml-3 mb-1">Active Cases</div>
+							<div class="column"></div>
+						</div>
+						<div class="columns is-multiline">
+							<div class="column">
+								<a href="<%= data.config.publicPath %>/case/" class="box notification is-primary px-4 is-clickable">
+									<div class="heading">Goldingley Property Ltd.</div>
+									<div class="level-left">
+										<span class="icon-text pb-2 pr-1"><i class="fa fa-map-marker"></i></span>
+										<div class="title is-5 mb-2">
+										12 Doncaster Drive
+										</div>
+										</div>
+									<div class="level mb-2">
+										<div class="">
+											<div class="heading">Last Action</div>
+											<div class="title is-6">5 Days Ago</div>
+											<span class="tag is-danger">Confirm Proof of ID</span>
+										</div>
 									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Overall $</div>
-										<div class="title is-5">750K</div>
+									<progress class="progress is-danger" value="60" max="100">90%</progress>
+								</a>
+							</div>
+							<div class="column">
+								<a class="box notification is-primary px-4 is-clickable">
+									<div class="heading">Mr P. Staker</div>
+									<div class="level-left">
+										<span class="icon-text pb-2 pr-1"><i class="fa fa-map-marker"></i></span>
+										<div class="title is-5 mb-2">
+										26 Lake View
+										</div>
+										</div>
+									<div class="level mb-2">
+										<div class="">
+											<div class="heading">Last Action</div>
+											<div class="title is-6">1 Days Ago</div>
+											<span class="tag is-warning">Waiting for Buyer</span>
+										</div>
+
+
 									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Sales %</div>
-										<div class="title is-5">25%</div>
+									<progress class="progress is-warning" value="20" max="100">20%</progress>
+								</a>
+							</div>
+							<div class="column">
+								<a class="box notification is-primary px-4 is-clickable">
+									<div class="heading">Mrs T. Powell</div>
+									<div class="level-left">
+									<span class="icon-text pb-2 pr-1"><i class="fa fa-map-marker"></i></span>
+									<div class="title is-5 mb-2">
+									9 West Street
 									</div>
-								</div>
+									</div>
+									<div class="level mb-2">
+										<div class="">
+											<div class="heading">Last Action</div>
+											<div class="title is-6">7 Weeks Ago</div>
+											<span class="tag is-success">Hand-over Complete</span>
+
+										</div>
+
+
+									</div>
+									<progress class="progress is-success" value="100" max="100">100%</progress>
+								</a>
+							</div>
+							<div class="column">
+								<a class="box notification is-primary px-4 is-clickable">
+									<div class="heading">Mr C. Allerton</div>
+									<div class="level-left">
+									<span class="icon-text pb-2 pr-1"><i class="fa fa-map-marker"></i></span>
+									<div class="title is-5 mb-2">
+									2 Strawberry Close
+									</div>
+									</div>
+									<div class="level mb-2">
+										<div class="">
+											<div class="heading">Last Action</div>
+											<div class="title is-6">> 1 Hour Ago</div>
+											<span class="tag is-warning">P60 Needed from Buyer</span>
+
+										</div>
+
+
+									</div>
+									<progress class="progress is-warning" value="30" max="100">30%</progress>
+								</a>
 							</div>
 						</div>
-					</div>
-					<div class="column">
-						<div class="box notification is-warning">
-							<div class="heading">Revenue / Expenses</div>
-							<div class="title">55% / 45%</div>
-							<div class="level">
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Rev Prod $</div>
-										<div class="title is-5">30%</div>
+
+						<div class="columns is-multiline">
+							<div class="column is-6">
+								<article class="message is-dark">
+									<div class="message-header">
+										<p>Chart</p>
 									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Rev Serv $</div>
-										<div class="title is-5">25%</div>
+									<div class="message-body">
+										<div id="chartLine" style="width: 100%"></div>
 									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Exp %</div>
-										<div class="title is-5">45%</div>
+								</article>
+							</div>
+							<div class="column is-6">
+								<article class="message is-dark">
+									<div class="message-header">
+										<p>Chart</p>
 									</div>
-								</div>
+									<div class="message-body">
+										<div id="chartScatter" style="width: 100%"></div>
+									</div>
+								</article>
+							</div>
+							<div class="column is-6">
+								<article class="message is-dark">
+									<div class="message-header">
+										<p>Chart</p>
+									</div>
+									<div class="message-body">
+										<div id="chartDoughnut" style="width: 100%"></div>
+									</div>
+								</article>
+							</div>
+							<div class="column is-6">
+								<article class="message is-dark">
+									<div class="message-header">
+										<p>Chart</p>
+									</div>
+									<div class="message-body">
+										<div id="chartBar" style="width: 100%"></div>
+									</div>
+								</article>
 							</div>
 						</div>
-					</div>
-					<div class="column">
-						<div class="box notification is-info">
-							<div class="heading">Feedback Activity</div>
-							<div class="title">78% &uarr;</div>
-							<div class="level">
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Pos</div>
-										<div class="title is-5">1560</div>
-									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Neg</div>
-										<div class="title is-5">368</div>
-									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Pos/Neg %</div>
-										<div class="title is-5">77% / 23%</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="column">
-						<div class="box notification is-danger">
-							<div class="heading">Orders / Returns</div>
-							<div class="title">75% / 25%</div>
-							<div class="level">
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Orders $</div>
-										<div class="title is-5">425K</div>
-									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Returns $</div>
-										<div class="title is-5">106K</div>
-									</div>
-								</div>
-								<div class="level-item">
-									<div class="">
-										<div class="heading">Success %</div>
-										<div class="title is-5">+ 28,5%</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
 
-				<div class="columns is-multiline">
-					<div class="column is-6">
-						<article class="message is-dark">
-							<div class="message-header">
-								<p>Chart</p>
-							</div>
-							<div class="message-body">
-								<div id="chartLine" style="width: 100%"></div>
-							</div>
-						</article>
-					</div>
-					<div class="column is-6">
-						<article class="message is-dark">
-							<div class="message-header">
-								<p>Chart</p>
-							</div>
-							<div class="message-body">
-								<div id="chartScatter" style="width: 100%"></div>
-							</div>
-						</article>
-					</div>
-					<div class="column is-6">
-						<article class="message is-dark">
-							<div class="message-header">
-								<p>Chart</p>
-							</div>
-							<div class="message-body">
-								<div id="chartDoughnut" style="width: 100%"></div>
-							</div>
-						</article>
-					</div>
-					<div class="column is-6">
-						<article class="message is-dark">
-							<div class="message-header">
-								<p>Chart</p>
-							</div>
-							<div class="message-body">
-								<div id="chartBar" style="width: 100%"></div>
-							</div>
-						</article>
-					</div>
-				</div>
+						<% include /horizontalAds %>
+							<% include /copyright %>
+				</main>
+		</div>
 
-				<% include /horizontalAds %>
-				<% include /copyright %>
-			</main>
-    </div>
+		<% include /jsonLd %>
+			<script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.js"></script>
+			<script defer src="<%= data.config.publicPath %>/js/module-chart.js"></script>
+</body>
 
-    <% include /jsonLd %>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.js"></script>
-    <script defer src="<%= data.config.publicPath %>/js/module-chart.js"></script>
-  </body>
 </html>

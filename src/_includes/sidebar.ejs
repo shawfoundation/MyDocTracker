@@ -6,7 +6,7 @@
     <ul class="menu-list">
       <li>
         <a class="<%= isActiveClass('home') %>" href="<%= data.config.publicPath %>/">
-          <span class="icon is-small"><i class="fa fa-tachometer"></i></span> <span class="menu-text">Dashboard</span>
+          <span class="icon is-small"><i class="fas fa-tachometer-alt"></i></span> <span class="menu-text">Dashboard</span>
         </a>
       </li>
     </ul>
@@ -14,45 +14,28 @@
     <ul class="menu-list">
       <li>
         <a class="<%= isActiveClass('forms') %>" href="<%= data.config.publicPath %>/forms/">
-          <span class="icon is-small"><i class="fa fa-pencil-square-o"></i></span> <span class="menu-text">Add New Case</span>
+          <span class="icon is-small"><i class="fas fa-user-plus"></i></span> <span class="menu-text">Add New Case</span>
         </a>
       </li>
       <li>
-        <a class="<%= isActiveClass('ui-elements') %>" href="<%= data.config.publicPath %>/ui-elements/">
-          <span class="icon is-small"><i class="fa fa-desktop"></i></span> <span class="menu-text">UI Elements</span>
+        <a class="<%= isActiveClass('case') %>" href="<%= data.config.publicPath %>/case/">
+          <span class="icon is-small"><i class="fas fa-clipboard-list"></i></span> <span class="menu-text">All Cases</span>
         </a>
       </li>
       <li>
         <a class="<%= isActiveClass('tables') %>" href="<%= data.config.publicPath %>/tables/">
-          <span class="icon is-small"><i class="fa fa-table"></i></span> <span class="menu-text">Tables</span>
+          <span class="icon is-small"><i class="fas fa-chart-line"></i></span> <span class="menu-text">Reports</span>
         </a>
       </li>
       <li>
-        <a class="<%= isActiveClass('presentations') %>" href="<%= data.config.publicPath %>/presentations/">
-          <span class="icon is-small"><i class="fa fa-bar-chart"></i></span>
-          <span class="menu-text">Presentations</span>
-        </a>
-      </li>
-
-      <li class="has-children">
-        <a class=""
-          ><span class="icon is-small"><i class="fa fa-cog"></i></span> <span class="menu-text">Layouts</span></a
-        >
-        <ul>
-          <li><a>Members</a></li>
-          <li><a>Plugins</a></li>
-          <li><a>Add a member</a></li>
-        </ul>
+        <a class="">
+          <span class="icon is-small"><i class="fa fa-cogs"></i></span> <span class="menu-text">Settings</span>
+          </a>
       </li>
     </ul>
 
-    <p class="menu-label">Live On</p>
+    <p class="menu-label">Cases</p>
     <ul class="menu-list">
-      <li>
-        <a class="<%= isActiveClass('additional') %>" href="<%= data.config.publicPath %>/additional/">
-          <span class="icon is-small"><i class="fa fa-bug"></i></span> <span class="menu-text">Additional Pages</span>
-        </a>
-      </li>
       <li>
         <a class="<%= isActiveClass('extras') %>" href="<%= data.config.publicPath %>/extras/">
           <span class="icon is-small"><i class="fa fa-windows"></i></span> <span class="menu-text">Extras</span>
