@@ -105,7 +105,7 @@ module.exports = {
       },
     }),
     extractHTML('index'),
-    extractHTML('forms'),
+    extractHTML('new-case-1'),
     extractHTML('presentations'),
     extractHTML('tables'),
     extractHTML('ui-elements'),

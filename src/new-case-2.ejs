@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include /metaTags %>
+</head>
+
+<body>
+	<% include /header %>
+
+		<div class="wrapper">
+			<%- include('/sidebar', {activeMenu: 'new-case-1' }) %>
+
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: 'Add New Case' , menuIcon: 'fas fa-user-plus' }) %>
+						<div class="tabs">
+							<ul>
+								<li><a href="<%= data.config.publicPath %>/new-case-1/">Property Details</a></li>
+								<li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+								<li class="is-active"><a href="<%= data.config.publicPath %>/new-case-2/">Buyer
+										Details</a></li>
+								<li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+								<li><a href="<%= data.config.publicPath %>/new-case-3/">Seller Details</a></li>
+								<li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+								<li><a href="<%= data.config.publicPath %>/new-case-4/">Solicitor Details</a></li>
+							</ul>
+						</div>
+						<div class="columns is-multiline pl-4">
+							<div class="column is-8">
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Title</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="Title" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">First Name</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="First Name" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Last Name</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="Last Name" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Date of Birth</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="date" placeholder="Date of Birth" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Phone Number</label>
+									</div>
+									<div class="field-body">
+										<div class="field is-expanded">
+											<div class="field has-addons">
+												<p class="control">
+													<a class="button is-static"> +44 </a>
+												</p>
+												<p class="control is-expanded">
+													<input class="input" type="tel" placeholder="Phone Number" />
+												</p>
+											</div>
+											<p class="help">Do not enter the first zero</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Email Address</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="Email Address" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Current Address</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="House Number" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field has-addons">
+									<div class="control is-expanded">
+										<input class="input" type="text" placeholder="Postcode">
+									</div>
+									<div class="control">
+										<a class="button is-primary">
+											Find Address
+										</a>
+									</div>
+								</div>
+								<div class="field">
+										<p class="control is-expanded">
+											<input class="input" type="text" placeholder="Town/City" />
+										</p>
+								</div>
+								<div class="field">
+									<p class="control is-expanded">
+										<input class="input" type="text" placeholder="County" />
+									</p>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Current Employment Status</label>
+									</div>
+									<div class="select is-fullwidth">
+										<select>
+											<option value="" disabled selected>Please Select</option>
+											<option>Worker</option>
+											<option>Employee</option>
+											<option>Self Employed / Contractor</option>
+											<option>Director</option>
+											<option>Office Holder</option>
+										</select>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Current Employer</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="Current Employer" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Employer Address</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="Employer Address" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Income Band (Gross)</label>
+									</div>
+									<div class="select is-fullwidth">
+										<select>
+											<option value="" disabled selected>Please Select</option>
+											<option>&lt; £14,999</option>
+											<option>£15,000 - £19,999</option>
+											<option>£20,000 - £24,999</option>
+											<option>£25,000 - £29,999</option>
+											<option>£30,000 - £34,999</option>
+											<option>£35,000 - £39,999</option>
+											<option>£40,000 - £44,999</option>
+											<option>£45,000 - £49,999</option>
+											<option>£50,000 - £54,999</option>
+											<option>£55,000 - £59,999</option>
+											<option>£70,000 - £79,999</option>
+											<option>£80,000 - £89,999</option>
+											<option>£90,000 - £99,999</option>
+											<option>£100,000 - £149,999</option>
+											<option>£150,000 - £199,999</option>
+											<option>£200,000 - £249,999</option>
+											<option>£250,000 - £299,999</option>
+											<option>£300,000 - £399,999</option>
+											<option>£400,000 - £499,999</option>
+											<option>£500,000 &gt;</option>
+										</select>
+									</div>
+								</div>
+								<div class="field pt-5">
+									<div class="field-body">
+										<div class="field">
+											<div class="control"">
+												<a class="button has-icon-right is-primary is-fullwidth" href="<%= data.config.publicPath %>/new-case-3/">
+													<span>Next</span>
+													<span class="icon">
+														<i class="fas fa-chevron-right"></i>
+													  </span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<% include /horizontalAds %>
+							<% include /copyright %>
+				</main>
+		</div>
+
+		<% include /jsonLd %>
+</body>
+
+</html>

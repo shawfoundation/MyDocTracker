@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include /metaTags %>
+</head>
+
+<body>
+	<% include /header %>
+
+		<div class="wrapper">
+			<%- include('/sidebar', {activeMenu: 'new-case-1' }) %>
+
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: 'Add New Case' , menuIcon: 'fas fa-user-plus' }) %>
+						<div class="tabs">
+							<ul>
+								<li class="is-active"><a href="<%= data.config.publicPath %>/new-case-1/">Property
+										Details</a></li>
+								<li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+								<li><a href="<%= data.config.publicPath %>/new-case-2/">Buyer Details</a></li>
+								<li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+								<li><a href="<%= data.config.publicPath %>/new-case-3/">Seller Details</a></li>
+								<li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+								<li><a href="<%= data.config.publicPath %>/new-case-4/">Solicitor Details</a></li>
+							</ul>
+						</div>
+						<div class="columns is-multiline pl-4">
+							<div class="column is-8">
+								<div class="field-label is-normal"">
+							<label class=" label">Case Address</label>
+								</div>
+								<div class="field has-addons">
+									<div class="control is-expanded">
+										<input class="input" type="text" placeholder="Address Line 1">
+									</div>
+									<div class="control">
+										<a class="button is-primary">
+											Import from Rightmove
+										</a>
+									</div>
+								</div>
+								<div class="field has-addons">
+									<div class="control is-expanded">
+										<input class="input" type="text" placeholder="Postcode">
+									</div>
+									<div class="control">
+										<a class="button is-primary">
+											Find Address
+										</a>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Property Type</label>
+									</div>
+									<div class="select is-fullwidth">
+										<select>
+											<option value="" disabled selected>Please Select</option>
+											<option>Detatched</option>
+											<option>Semi-Detatched</option>
+											<option>Terraced</option>
+											<option>Flat</option>
+											<option>Bungalow</option>
+											<option>Land</option>
+											<option>Park Home</option>
+										</select>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Bedrooms</label>
+									</div>
+									<div class="select is-fullwidth">
+										<select>
+											<option value="" disabled selected>Please Select</option>
+											<option>0</option>
+											<option>1</option>
+											<option>2</option>
+											<option>3</option>
+											<option>4</option>
+											<option>5</option>
+											<option>6</option>
+											<option>7</option>
+											<option>8</option>
+											<option>9</option>
+											<option>10</option>
+										</select>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Accepted Offer Amount</label>
+									</div>
+									<div class="field-body">
+										<div class="field is-expanded">
+											<div class="field has-addons">
+												<p class="control">
+													<a class="button is-static"> £ </a>
+												</p>
+												<p class="control is-expanded">
+													<input class="input" type="number"
+														placeholder="Accepted Offer Amount" />
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="field-label is-normal">
+										<label class="label">Date Accepted</label>
+									</div>
+									<div class="field-body">
+										<div class="field is-expanded">
+											<div class="field">
+												<p class="control is-expanded">
+													<input class="input" type="date" placeholder="Accepted Date" />
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="field pt-5">
+										<div class="field-body">
+											<div class="field">
+												<div class="control"">
+													<a class=" button has-icon-right is-primary is-fullwidth"
+													href="<%= data.config.publicPath %>/new-case-2/">
+													<span>Next</span>
+													<span class="icon">
+														<i class="fas fa-chevron-right"></i>
+													</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<% include /horizontalAds %>
+								<% include /copyright %>
+				</main>
+		</div>
+
+		<% include /jsonLd %>
+</body>
+
+</html>

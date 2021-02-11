@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include /metaTags %>
+</head>
+
+<body>
+	<% include /header %>
+
+		<div class="wrapper">
+			<%- include('/sidebar', {activeMenu: 'new-case-1' }) %>
+
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: 'Add New Case' , menuIcon: 'fas fa-user-plus' }) %>
+					<div class="tabs">
+						<ul>
+						  <li><a href="<%= data.config.publicPath %>/new-case-1/">Property Details</a></li>
+						  <li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+						  <li><a href="<%= data.config.publicPath %>/new-case-2/">Buyer Details</a></li>
+						  <li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+						  <li><a href="<%= data.config.publicPath %>/new-case-3/">Seller Details</a></li>
+						  <li><span class="icon is-1"><i class="fa fa-chevron-right"></i></span></li>
+						  <li class="is-active"><a href="<%= data.config.publicPath %>/new-case-4/">Solicitor Details</a></li>
+						</ul>
+					  </div>
+						<div class="columns is-multiline pl-4">
+							<div class="column is-8">
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Case Agent</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text"
+													placeholder="Name of Case Agent" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field-label is-normal">
+									<label class="label">Solicitor Company</label>
+								</div>
+								<div class="field has-addons">
+									<div class="control is-expanded">
+										<input class="input" type="text" placeholder="Solicitor Company">
+									</div>
+									<div class="control">
+										<a class="button is-primary">
+											Search
+										</a>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Solicitor Email Address</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text"
+													placeholder="Solicitor Email Address" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Solicitor Phone Number</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="number"
+													placeholder="Solicitor Phone Number" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field">
+									<div class="field-label is-normal">
+										<label class="label">Solicitor Address</label>
+									</div>
+									<div class="field-body">
+										<div class="field">
+											<p class="control is-expanded">
+												<input class="input" type="text" placeholder="Address Line 1" />
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="field has-addons">
+									<div class="control is-expanded">
+										<input class="input" type="text" placeholder="Postcode">
+									</div>
+									<div class="control">
+										<a class="button is-primary">
+											Find Address
+										</a>
+									</div>
+								</div>
+								<div class="field">
+									<p class="control is-expanded">
+										<input class="input" type="text" placeholder="Town/City" />
+									</p>
+								</div>
+								<div class="field">
+									<p class="control is-expanded">
+										<input class="input" type="text" placeholder="County" />
+									</p>
+								</div>
+								<div class="field pt-3">
+									<div class="field-body">
+										<div class="field">
+											<div class="control">
+												<a href="<%= data.config.publicPath %>/case/" class="button is-primary is-fullwidth">Add Case</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<% include /horizontalAds %>
+							<% include /copyright %>
+				</main>
+		</div>
+
+		<% include /jsonLd %>
+</body>
+
+</html>

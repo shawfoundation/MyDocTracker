@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include /metaTags %>
+</head>
+
+<body>
+	<% include /header %>
+	<% include /request-access %>
+	<% include /doc-preview %>
+	<% include /request-files %>
+
+		<div class="wrapper">
+			<%- include('/sidebar', {activeMenu: 'case' }) %>
+
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: '12 Doncaster Drive' , menuIcon: 'fa-home' }) %>
+						<div class="tabs">
+							<ul>
+								<li><a href="<%= data.config.publicPath %>/case/">Overview</a></li>
+								<li class="is-active"><a>Contact Details</a></li>
+								<li><a href="<%= data.config.publicPath %>/case-document-library/">Documents Library</a></li>
+								<li><a>Messages</a></li>
+							</ul>
+						</div>
+						<table class="table is-fullwidth">
+							<tr>
+								<td>Case Address: 12 Doncaster Drive, S63 7JS</td>
+								<td>Buyer Name: John Walker</td>
+								<td>Email Address: johnwalker@gmail.com</td>
+								<td>Solicitor Company: Scott Solicitors</td>
+							</tr>
+							<tr>
+								<td>Property Type: Semi-Detatched</td>
+								<td>Buyer DOB: 12/04/1967</td>
+								<td>Current Address: 80 Baker Street, S72 9DW</td>
+								<td>Income Band: £15,000 - £19,999</td>
+							</tr>
+							<tr>
+								<td>Bedrooms: 2</td>
+								<td> </td>
+								<td>Phone No: 07672905662</td>
+								<td>Case Agent: Tim Turner</td>
+							</tr>
+							<tr>
+								<td>Accepted Offer: £68,000</td>
+								<td></td>
+								<td>Employer Address: 2 Green Street</td>
+								<td>Solicitor Email: Tim@SSolicitors.com</td>
+							</tr>
+							<tr>
+								<td>Date Accepted: 01/01/2021</td>
+								<td></td>
+								<td>Employment Status: Employee</td>
+								<td></td>
+							</tr>
+							</table>
+						<% include /horizontalAds %>
+							<% include /copyright %>
+				</main>
+
+		<% include /jsonLd %>
+		<script>
+			function openRequestAccess() {
+				var element = document.getElementById("request-access-modal");
+				element.classList.add("is-active");
+			}
+
+			function openDocPreview() {
+				var element = document.getElementById("doc-preview-modal");
+				element.classList.add("is-active");
+			}
+
+			function openRequestFiles() {
+				var element = document.getElementById("request-files-modal");
+				element.classList.add("is-active");
+			}
+		</script>
+</body>
+
+</html>
