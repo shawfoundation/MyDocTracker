@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include /metaTags %>
+</head>
+
+<body>
+	<% include /header %>
+	<% include /request-access %>
+	<% include /doc-preview %>
+	<% include /request-files %>
+
+		<div class="wrapper">
+			<%- include('/sidebar', {activeMenu: 'case' }) %>
+
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: '12 Doncaster Drive' , menuIcon: 'fa-home' }) %>
+						<div class="tabs">
+							<ul>
+								<li><a href="<%= data.config.publicPath %>/case/">Overview</a></li>
+								<li><a>Contact Details</a></li>
+								<li class="is-active"><a>Documents Library</a></li>
+								<li><a>Messages</a></li>
+							</ul>
+						</div>
+						<div class="title is-4 ml-3 mb-5">Uploaded Files (4)
+							<button class="button is-primary is-rounded ml-3" onclick="openRequestFiles()">
+								<span>Request Files </span>
+								<span class="icon">
+									<i class="fas fa-plus"></i>
+								  </span>
+							</button>
+						</div>
+						<div class="columns">
+							<div class="column">
+								<div class="card is-clickable">
+									<div class="card-image" onclick="openDocPreview()">
+										<span class="icon"
+											style="background-color: #ff79c6; color: white; height: 200px; width: 100%; font-size: 6rem;">
+											<i class="fas fa-passport"></i>
+										</span>
+									</div>
+									<div class="card-content py-3">
+										<div class="content">
+											Scan of Passport
+											<br>
+											<small>17:21 - 30 January 2021</small>
+										</div>
+									</div>
+									<footer class="card-footer">
+										<a onclick="openDocPreview()" class="card-footer-item">Preview</a>
+										<a onclick="openDocPreview()" class="card-footer-item">Save</a>
+									  </footer>
+								</div>
+							</div>
+							<div class="column">
+								<div class="card is-clickable">
+									<div class="card-image">
+										<span class="icon"
+											style="background-color: #cccccc; color: white; height: 200px; width: 100%; font-size: 6rem;">
+											<i class="fas fa-lock"></i>
+										</span>
+									</div>
+									<div class="card-content py-3">
+										<div class="content">
+											Payslip (October 2020)
+											<br>
+											<small>17:19 - 30 January 2021</small>
+										</div>
+									</div>
+									<footer class="card-footer">
+										<a onclick="openRequestAccess()" class="card-footer-item">Request Access</a>
+									  </footer>
+								</div>
+							</div>
+							<div class="column">
+								<div class="card is-clickable">
+									<div class="card-image">
+										<span class="icon"
+											style="background-color: #cccccc; color: white; height: 200px; width: 100%; font-size: 6rem;">
+											<i class="fas fa-lock"></i>
+										</span>
+									</div>
+									<div class="card-content py-3">
+										<div class="content">
+											Payslip (November 2020)
+											<br>
+											<small>17:19 - 30 January 2021</small>
+										</div>
+									</div>
+									<footer class="card-footer">
+										<a onclick="openRequestAccess()" class="card-footer-item">Request Access</a>
+									  </footer>
+								</div>
+							</div>
+							<div class="column">
+								<div class="card is-clickable">
+									<div class="card-image">
+										<span class="icon"
+											style="background-color: #cccccc; color: white; height: 200px; width: 100%; font-size: 6rem;">
+											<i class="fas fa-lock"></i>
+										</span>
+									</div>
+									<div class="card-content py-3">
+										<div class="content">
+											Payslip (December 2020)
+											<br>
+											<small>17:19 - 30 January 2021</small>
+										</div>
+									</div>
+									<footer class="card-footer">
+										<a onclick="openRequestAccess()" class="card-footer-item">Request Access</a>
+									  </footer>
+								</div>
+							</div>
+						</div>
+						<div class="columns">
+							<div class="column is-3">
+								<div class="card is-clickable">
+									<div class="card-image" onclick="openDocPreview()">
+										<span class="icon"
+											style="background-color: #ffd79a; color: white; height: 200px; width: 100%; font-size: 6rem;">
+											<i class="fas fa-user-clock"></i>
+										</span>
+									</div>
+									<div class="card-content py-3">
+										<div class="content">
+											P60
+											<br>
+											<small>Requested <b>10 Days Ago</b></small>
+										</div>
+									</div>
+									<footer class="card-footer">
+										<a onclick="openRequestAccess()" class="card-footer-item">Send Reminder</a>
+									  </footer>
+								</div>
+							</div>
+
+						</div>
+						<% include /horizontalAds %>
+							<% include /copyright %>
+				</main>
+
+		<% include /jsonLd %>
+		<script>
+			function openRequestAccess() {
+				var element = document.getElementById("request-access-modal");
+				element.classList.add("is-active");
+			}
+
+			function openDocPreview() {
+				var element = document.getElementById("doc-preview-modal");
+				element.classList.add("is-active");
+			}
+
+			function openRequestFiles() {
+				var element = document.getElementById("request-files-modal");
+				element.classList.add("is-active");
+			}
+		</script>
+</body>
+
+</html>

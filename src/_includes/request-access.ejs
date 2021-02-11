@@ -1,0 +1,21 @@
+<div id="request-access-modal" class="modal">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Request Access to File</p>
+			<a class="delete" aria-label="close" href="<%= data.config.publicPath %>/case-document-library/"></a>
+		</header>
+		<section class="modal-card-body" style="background-color: #282a36;">
+			<div class="title is-5" style="font-weight: normal;">Do you want to Request Access to this File?</div>
+		</section>
+		<footer class="modal-card-foot">
+			<a class="button is-success" href="<%= data.config.publicPath %>/case-document-library/">Send Request</a>
+			<a class="button" href="<%= data.config.publicPath %>/case-document-library/">Cancel</a>
+		</footer>
+	</div>
+</div>
+<!-- MODAL END -->
+
+<% include /jsonLd %>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.js"></script>
+	<script defer src="<%= data.config.publicPath %>/js/module-chart.js"></script>

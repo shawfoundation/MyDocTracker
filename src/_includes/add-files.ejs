@@ -1,0 +1,221 @@
+<div id="add-files-modal" class="modal">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Files Request</p>
+			<a class="delete" aria-label="close" href="<%= data.config.publicPath %>/buyerview/"></a>
+		</header>
+		<section class="modal-card-body">
+			<p style="color: rgba(0, 0, 0, 0.7); margin-bottom: 2rem;">
+				<b>Tim Parker</b> from <b>AZ Mortgage Advisors</b> requested the following documents:
+			</p>
+			<div class="columns is-vcentered is-gapless">
+				<div class="column">
+					<div class=" notification is-light">
+						<label class="label" style="color: rgba(0, 0, 0, 0.7);">Utility
+							Bill</label>
+						<p class="help"><span class="icon-text"><i class="fa fa-info-circle"></i></span> Scan
+							of a Utility Bill with your Name and Address dated in the last 3
+							months</p>
+					</div>
+				</div>
+				<!-- CHEVRON -->
+				<div class="column mx-1" style="max-width: fit-content; font-size: x-large; color: rgba(0, 0, 0, 0.7);">
+					<div class="level">
+						<div class="level-item">
+							<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+						</div>
+					</div>
+				</div>
+				<!-- /CHEVRON -->
+				<div class="column">
+					<div id="file-upload" class="file is-boxed is-light">
+						<label class="file-label">
+							<input class="file-input" type="file" name="resume">
+							<span class="file-cta" style="width: 258px;">
+								<span class="file-icon">
+									<i class="fas fa-upload"></i>
+								</span>
+								<span id="upload-label" class="file-label">
+									Drag or Choose a file…
+								</span>
+							</span>
+						</label>
+					</div>
+				</div>
+
+			</div>
+			<!-- ROW 2 -->
+			<div class="columns is-vcentered is-gapless">
+				<div class="column">
+					<div class=" notification is-light">
+						<label class="label" style="color: rgba(0, 0, 0, 0.7);">P60 Form</label>
+						<p class="help"><span class="icon-text"><i class="fa fa-info-circle"></i></span> Scan
+							of a latest P60 from your employer</p>
+					</div>
+				</div>
+				<!-- CHEVRON -->
+				<div class="column mx-1" style="max-width: fit-content; font-size: x-large; color: rgba(0, 0, 0, 0.7);">
+					<div class="level">
+						<div class="level-item">
+							<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+						</div>
+					</div>
+				</div>
+				<!-- /CHEVRON -->
+				<div class="column">
+					<div id="file-upload" class="file is-boxed is-light">
+						<label class="file-label">
+							<input class="file-input" type="file" name="resume">
+							<span class="file-cta">
+								<span class="file-icon">
+									<i class="fas fa-upload"></i>
+								</span>
+								<span id="upload-label" class="file-label">
+									Drag or Choose a file…
+								</span>
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<!-- ROW 3 -->
+			<div class="columns is-vcentered is-gapless">
+				<div class="column">
+					<div class=" notification is-light">
+						<label class="label" style="color: rgba(0, 0, 0, 0.7);">Driving
+							License</label>
+						<p class="help"><span class="icon-text"><i class="fa fa-info-circle"></i></span> Scan
+							of your Driving License</p>
+					</div>
+				</div>
+				<!-- CHEVRON -->
+				<div class="column mx-1" style="max-width: fit-content; font-size: x-large; color: rgba(0, 0, 0, 0.7);">
+					<div class="level">
+						<div class="level-item">
+							<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+						</div>
+					</div>
+				</div>
+				<!-- /CHEVRON -->
+				<div class="column">
+					<div id="file-upload" class="file is-boxed is-light">
+						<label class="file-label">
+							<input class="file-input" type="file" name="resume">
+							<span class="file-cta">
+								<span class="file-icon">
+									<i class="fas fa-upload"></i>
+								</span>
+								<span id="upload-label" class="file-label">
+									Drag or Choose a file…
+								</span>
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="columns is-vcentered is-gapless">
+				<div class="column">
+					<div class="notification is-light" style="width: 284px;">
+						<br>
+						<label class="label" style="color: rgba(0, 0, 0, 0.7);">Past 3
+							Payslips</label>
+						<p class="help"><span class="icon-text"><i class="fa fa-info-circle"></i></span> Scans of the
+							last 3
+							Payslips you
+							recieved from your employer</p>
+						<br>
+					</div>
+				</div>
+				<!-- CHEVRON -->
+				<div class="column mx-1" style="max-width: fit-content; font-size: x-large; color: rgba(0, 0, 0, 0.7);">
+					<div class="level">
+						<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+					</div>
+					<div class="level">
+						<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+					</div>
+					<div class="level">
+						<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+					</div>
+				</div>
+				<!-- /CHEVRON -->
+				<div class="column" style="color: rgba(0, 0, 0, 0.7); max-width: fit-content; font-weight: 700;">
+					<div class="level mr-2 mb-2 mt-2">
+						<div class="notification is-light p-2">1</div>
+					</div>
+					<div class="level mr-2 mb-2">
+						<div class=" notification is-light p-2">2</div>
+					</div>
+					<div class="level mr-2 mb-2">
+						<div class=" notification is-light p-2">3</div>
+					</div>
+				</div>
+				<div class="column">
+					<div class="level mb-2">
+						<div id="file-upload" class="file is-normal is-fullwidth is-light">
+							<label class="file-label">
+								<input class="file-input" type="file" name="resume">
+								<span class="file-cta" style="padding: 7px 19px;">
+									<span class="file-icon">
+										<i class="fas fa-upload"></i>
+									</span>
+									<span id="upload-label" class="file-label">
+										Drag or Choose a file...
+									</span>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="level mb-2">
+						<div id="file-upload" class="file is-normal is-fullwidth is-light">
+							<label class="file-label">
+								<input class="file-input" type="file" name="resume">
+								<span class="file-cta" style="padding: 7px 19px;">
+									<span class="file-icon">
+										<i class="fas fa-upload"></i>
+									</span>
+									<span id="upload-label" class="file-label">
+										Drag or Choose a file...
+									</span>
+								</span>
+							</label>
+						</div>
+					</div>
+					<div class="level">
+						<div id="file-upload" class="file is-normal is-fullwidth is-light">
+							<label class="file-label">
+								<input class="file-input" type="file" name="resume">
+								<span class="file-cta" style="padding: 7px 19px;">
+									<span class="file-icon">
+										<i class="fas fa-upload"></i>
+									</span>
+									<span id="upload-label" class="file-label">
+										Drag or Choose a file...
+									</span>
+								</span>
+							</label>
+						</div>
+					</div>
+				</div>
+		</section>
+		<footer class="modal-card-foot">
+			<a class="button is-success" href="<%= data.config.publicPath %>/buyerview/">Submit</a>
+			<a class="button" href="<%= data.config.publicPath %>/buyerview/">Cancel</a>
+		</footer>
+	</div>
+</div>
+<!-- MODAL END -->
+
+<% include /jsonLd %>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.js"></script>
+	<script defer src="<%= data.config.publicPath %>/js/module-chart.js"></script>
+	<script>
+		const fileInput = document.querySelector('#file-upload input[type=file]');
+		fileInput.onchange = () => {
+			if (fileInput.files.length > 0) {
+				const fileName = document.querySelector('#upload-label');
+				fileName.textContent = fileInput.files[0].name;
+			}
+		}
+	</script>

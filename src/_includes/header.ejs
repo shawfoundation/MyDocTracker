@@ -5,7 +5,7 @@
         <a class="navbar-item is--brand">
           <img
             class="navbar-brand-logo"
-            src="<%= data.config.publicPath %>/img/logo-64.png"
+            src="<%= data.config.publicPath %>/img/logo-EF.png"
             alt="Brand logo"
           />
 				</a>
@@ -35,17 +35,24 @@
             <figure class="image is-32x32" style="margin-right: 0.5em">
               <img src="<%= data.config.publicPath %>/img/MichaelScott.png" />
             </figure>
-            Scott Solicitors
+            Change View Here
           </a>
 
           <div class="navbar-dropdown is-right">
-            <a class="navbar-item" href="https://mazipan.space/" target="_blank" rel="noopener noreferrer">
+            <a class="navbar-item" href="<%= data.config.publicPath %>/buyerview/" >
               <span class="icon is-small">
-                <i class="fa fa-user-o"></i>
+                <i class="fas fa-user"></i>
               </span>
-              &nbsp; Profile
+              &nbsp; View as Buyer
             </a>
             <hr class="navbar-divider" />
+              <a class="navbar-item" href="<%= data.config.publicPath %>/" >
+                <span class="icon is-small">
+                  <i class="fas fa-user"></i>
+                </span>
+                &nbsp; View as Mortgage Company
+              </a>
+              <hr class="navbar-divider" />
             <a class="navbar-item">
               <span class="icon is-small">
                 <i class="fa fa-power-off"></i>

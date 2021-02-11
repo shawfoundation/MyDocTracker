@@ -1,0 +1,119 @@
+<style>
+	.normal-text {
+		color: rgba(0, 0, 0, 0.7)
+	}
+</style>
+
+<div id="request-files-modal" class="modal">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Files Request</p>
+			<a class="delete" aria-label="close" href="<%= data.config.publicPath %>/case-document-library/"></a>
+		</header>
+		<section class="modal-card-body">
+			<div class="field">
+				<label class="label normal-text">Delivery Type</label>
+				<div class="control">
+					<label class="radio normal-text">
+						<input type="radio" name="deliveryType" checked>
+						Upload Scan
+					</label>
+					<label class="radio normal-text">
+						<input type="radio" name="deliveryType">
+						Deliver in Person
+					</label>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label normal-text">Document</label>
+				<div class="control">
+					<div class="select is-fullwidth">
+						<select>
+							<option value="" disabled selected>Please Select</option>
+							<option>Proof of ID</option>
+							<option>Proof of Address</option>
+							<option>Proof of Income</option>
+							<option>Proof of Deposit</option>
+							<option>Other</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label normal-text">Document Type</label>
+				<div class="control">
+					<div class="select is-fullwidth">
+						<select>
+							<option value="" disabled selected>Please Select</option>
+							<option>Passport</option>
+							<option>Driving License</option>
+							<option>Other</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label normal-text">Other</label>
+				<div class="control">
+					<div class="control">
+						<input class="input is-fullwidth" type="text" placeholder="Enter Document Name">
+					  </div>
+				</div>
+			</div>
+			<div class="label normal-text">Reminder</div>
+			<label class="checkbox normal-text">
+				Set Reminder
+				<input type="checkbox">
+			  </label>
+			  <div class="field is-horizontal">
+				<div class="field-body">
+				  <div class="field is-expanded">
+					<div class="field has-addons">
+					  <p class="control">
+						<a class="button is-static">
+						  Remind in
+						</a>
+					  </p>
+					  <p class="control is-expanded">
+						<input class="input" type="tel" placeholder="Enter number of days">
+					  </p>
+					  <p class="control">
+						<a class="button is-static">
+						  Days
+						</a>
+					  </p>
+					</div>
+					<p class="help">Reminder will be sent if files aren't sent before reminder date</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="field">
+				<label class="label normal-text">Comments</label>
+				<div class="control">
+					<div class="control">
+						<textarea class="textarea is-fullwidth" placeholder="Enter any Comments"></textarea>
+					  </div>
+				</div>
+			</div>
+		</section>
+		<footer class="modal-card-foot">
+			<a class="button is-success" href="<%= data.config.publicPath %>/case-document-library/">Submit</a>
+			<a class="button" href="<%= data.config.publicPath %>/case-document-library/">Cancel</a>
+		</footer>
+	</div>
+</div>
+<!-- MODAL END -->
+
+<% include /jsonLd %>
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.js"></script>
+	<script defer src="<%= data.config.publicPath %>/js/module-chart.js"></script>
+	<script>
+		const fileInput = document.querySelector('#file-upload input[type=file]');
+		fileInput.onchange = () => {
+			if (fileInput.files.length > 0) {
+				const fileName = document.querySelector('#upload-label');
+				fileName.textContent = fileInput.files[0].name;
+			}
+		}
+	</script>

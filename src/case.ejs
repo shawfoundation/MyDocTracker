@@ -13,7 +13,40 @@
 
 				<main class="main" id="main">
 					<%- include('/breadcrumb', {menuTitle: '12 Doncaster Drive' , menuIcon: 'fa-home' }) %>
-
+					<div class="tabs">
+						<ul>
+						  <li class="is-active"><a>Overview</a></li>
+						  <li><a>Contact Details</a></li>
+						  <li><a href="<%= data.config.publicPath %>/case-document-library/">Documents Library</a></li>
+						  <li><a>Messages</a></li>
+						</ul>
+					  </div>
+						<table class="table is-fullwidth">
+						<tr>
+							<td>Buyer: Goldingley Property Ltd.</td>
+							<td>Property Type: Semi-Detatched House</td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+						</tr>
+						<tr>
+							<td>Seller: Mr. T Walker</td>
+							<td>Case Manager: Sam Turner</td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+						</tr>
+						<tr>
+							<td>Offer Accepted: 29/01/2021</td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+							<td> </td>
+						</tr>
+						</table>
 						<div class="columns is-multiline is-vcentered is-gapless">
 							<div class="column">
 								<div class="box notification is-success">
@@ -33,7 +66,7 @@
 							<!-- /CHEVRON -->
 							<div class="column">
 								<div class="box notification is-warning p-4">
-									<div class="heading">Morgage Application</div>
+									<div class="heading">Mortgage Application</div>
 									<div class="title">In Progress</div>
 									<div class="level-left">
 										<div class="level-item pb-2">
@@ -131,7 +164,7 @@
 									</td>
 								</tr>
 								<tr>
-									<th>Michal Scott Solicitors</th>
+									<th>Scott Solicitors</th>
 									<td>Approved Proof of Income</td>
 									<td>05/02/2021</td>
 									<td></td>

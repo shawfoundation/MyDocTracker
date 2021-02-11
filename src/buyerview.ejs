@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<% include /metaTags %>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.css" />
+</head>
+
+<body>
+	<% include /header %>
+	<% include /add-files %>
+
+		<div class="wrapper">
+
+			<%- include('/buyersidebar', {activeMenu: 'home' }) %>
+
+				<main class="main" id="main">
+					<%- include('/breadcrumb', {menuTitle: '32 Clayton Drive' , menuIcon: 'fas fa-tachometer-alt' }) %>
+
+						<div class="column">
+							<div class="title is-4 ml-3 mb-3">Welcome Jack</div>
+							<article class="message is-info mb-3">
+								<div class="message-header"><p>New Notification!</p>
+									<button class="delete"></button>
+								</div>
+								<div class="message-body">
+									Tim Parker sent you <b>4 Document Requests</b>, Please complete the request as soon as possible,
+									this will make the mortgage process as quick as possible.<br>
+									<button class="button is-small is-info is-rounded mt-3" onclick="openAddFiles()">
+										<span class="icon">
+											<i class="fas fa-reply"></i>
+										  </span>
+										<span> Respond Now</span>
+									</button>
+								</div>
+							</article>
+						</div>
+						<div class="columns is-multiline is-vcentered is-gapless">
+							<div class="column">
+								<div class="box notification is-success">
+									<div class="heading">Offer Accepted</div>
+									<div class="title">£68,000</div>
+
+								</div>
+							</div>
+							<!-- CHEVRON -->
+							<div class="column mx-1" style="max-width: fit-content; font-size: xx-large;">
+								<div class="level">
+									<div class="level-item">
+										<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- /CHEVRON -->
+							<div class="column">
+								<div class="box notification is-warning p-4">
+									<div class="heading">Mortgage Application</div>
+									<div class="title">In Progress</div>
+									<div class="level-left">
+										<div class="level-item pb-2">
+											<div class="title is-7">Broker has requested documents.<br>Please
+												repond now</div>
+											</div>
+										</div>
+										<button class="button is-small is-dark is-rounded mt-3" onclick="openAddFiles()">
+											<span class="icon">
+												<i class="fas fa-reply"></i>
+											  </span>
+											<span> Respond Now</span>
+										</button>
+																	</div>
+							</div>
+							<!-- CHEVRON -->
+							<div class="column mx-1" style="max-width: fit-content; font-size: xx-large;">
+								<div class="level">
+									<div class="level-item">
+										<span class="icon is-1"><i class="fa fa-times"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- /CHEVRON -->
+							<div class="column">
+								<div class="box notification is-light">
+									<div class="heading">Mortgage Approved</div>
+									<div class="title is-5">Projected:<br>3 Weeks</div>
+								</div>
+							</div>
+							<!-- CHEVRON -->
+							<div class="column mx-1" style="max-width: fit-content; font-size: xx-large;">
+								<div class="level">
+									<div class="level-item">
+										<span class="icon is-1"><i class="fa fa-chevron-right"></i></span>
+									</div>
+								</div>
+							</div>
+							<!-- /CHEVRON -->
+							<div class="column">
+								<div class="box notification is-light">
+									<div class="heading">Keys Exchanged</div>
+									<div class="title is-5">Projected:<br>4 Weeks</div>
+
+								</div>
+							</div>
+						</div>
+						
+
+						<% include /horizontalAds %>
+							<% include /copyright %>
+				</main>
+		</div>
+
+		<% include /jsonLd %>
+			<script defer src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.22.0/apexcharts.min.js"></script>
+			<script defer src="<%= data.config.publicPath %>/js/module-chart.js"></script>
+			<script>
+				function openAddFiles() {
+					var element = document.getElementById("add-files-modal");
+					element.classList.add("is-active");
+				}
+			</script>
+</body>
+
+</html>
