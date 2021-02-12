@@ -1,9 +1,12 @@
+$primary: #045B62;
 // Add variable overrides before the Bulma import
-@import "~bulma-dracula/src/bulma-dracula.scss";
+@import "node_modules/bulma/bulma.sass";
 
-$theme: #44475a;
-$selected: #6272a4;
+$theme: #045B62;
+$theme-darker: #02393E;
+$selected: #0D484E;
 $text: #f8f8f2;
+$background: #02393E;
 
 :root {
   --animate-duration: 1s;
@@ -49,7 +52,7 @@ $text: #f8f8f2;
 
 // Nav bar menu
 .navbar-menu {
-	// background-color: $theme;
+	background-color: $theme;
 	// on mobile only
 	@media (max-width: 1023px) {
 		padding: 2px 0 0 0;
@@ -215,7 +218,7 @@ $text: #f8f8f2;
 
 // navigation left area
 .aside {
-	background: $theme;
+	background: $theme-darker;
 	padding: 2em .5em 0 .5em;
   height: calc(100vh - 64px);
   overflow: hidden;
@@ -232,13 +235,14 @@ $text: #f8f8f2;
     bottom: 0;
     left: 0;
     position: absolute;
-    background-color: #bd93f9;
+    background-color: #17676E;
     padding: 1rem 2rem;
     display: flex;
     justify-content: flex-end;
 
     .icon {
       transition: 0.3s linear transform;
+      color: white;
     }
 
 	}
@@ -251,6 +255,10 @@ $text: #f8f8f2;
     li {
       margin-top: .5em;
 
+    }
+    
+    .is-active {
+      background-color: $selected;
     }
 
     .has-children {
@@ -409,6 +417,7 @@ $text: #f8f8f2;
 
 .copyright {
   background: $theme;
+  color: white;
   width: 100%;
   position: fixed;
   bottom: 0;
